@@ -10,6 +10,7 @@ import SwiftUI
 struct AddFriend: View {
     
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
     @State private var age = ""
@@ -41,9 +42,26 @@ struct AddFriend: View {
                         }
                     }
                 } header : {
-                    Text("Rate your friend")
+                    Text("Rate your friend and write a review.")
+                }
+                
+                Section {
+                    Button("Save") {
+                        let newFreind = Friend(context: moc)
+                        newFreind.id = UUID()
+                        newFreind.name = name
+                        newFreind.age = Int16(age) ?? 0
+                        newFreind.vibe = vibe
+                        newFreind.review = review
+                        newFreind.rating = Int16(rating)
+                        
+                        try? moc.save()
+                        dismiss()
+                        
+                    }
                 }
             }
+            .navigationTitle("Add New Friend")
         }
     }
 }
