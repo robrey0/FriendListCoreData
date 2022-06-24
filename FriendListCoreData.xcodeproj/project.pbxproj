@@ -14,6 +14,8 @@
 		D52FCD76286381DE0026097F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52FCD75286381DE0026097F /* Preview Assets.xcassets */; };
 		D52FCD81286382530026097F /* FriendList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD7F286382520026097F /* FriendList.xcdatamodeld */; };
 		D52FCD83286389FE0026097F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD82286389FE0026097F /* DataController.swift */; };
+		D5810DBB28660F6A002DFB6C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5810DBA28660F6A002DFB6C /* RatingView.swift */; };
+		D5810DBD28665523002DFB6C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5810DBC28665523002DFB6C /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		D52FCD75286381DE0026097F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D52FCD80286382530026097F /* FriendList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendList.xcdatamodel; sourceTree = "<group>"; };
 		D52FCD82286389FE0026097F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D5810DBA28660F6A002DFB6C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		D5810DBC28665523002DFB6C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				D52FCD70286381D70026097F /* ContentView.swift */,
 				D52FCD82286389FE0026097F /* DataController.swift */,
 				D523741B2864D795004926DA /* AddFriend.swift */,
+				D5810DBA28660F6A002DFB6C /* RatingView.swift */,
+				D5810DBC28665523002DFB6C /* EmojiRatingView.swift */,
 				D52FCD7F286382520026097F /* FriendList.xcdatamodeld */,
 				D52FCD72286381DD0026097F /* Assets.xcassets */,
 				D52FCD74286381DE0026097F /* Preview Content */,
@@ -148,7 +154,9 @@
 			files = (
 				D523741C2864D795004926DA /* AddFriend.swift in Sources */,
 				D52FCD71286381D70026097F /* ContentView.swift in Sources */,
+				D5810DBD28665523002DFB6C /* EmojiRatingView.swift in Sources */,
 				D52FCD83286389FE0026097F /* DataController.swift in Sources */,
+				D5810DBB28660F6A002DFB6C /* RatingView.swift in Sources */,
 				D52FCD6F286381D70026097F /* FriendListCoreDataApp.swift in Sources */,
 				D52FCD81286382530026097F /* FriendList.xcdatamodeld in Sources */,
 			);

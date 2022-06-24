@@ -16,48 +16,42 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Text("Number of friends: \(friends.count)")
-                .navigationTitle("Friends List")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showingAddFriendView.toggle()
-                        } label: {
-                            Label("Add Book", systemImage: "plus")
+            List {
+                ForEach(friends) { friend in
+                    NavigationLink {
+                        Text(friend.name ?? "Anonimo")
+                    } label : {
+                        HStack {
+                            EmojiRatingView(rating: friend.rating)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                Text(friend.name ?? "Anonimo")
+                                    .font(.headline)
+                                
+                                Text(friend.vibe ?? "Whatever Vibe")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }
-                .sheet(isPresented: $showingAddFriendView) {
-                    AddFriend()
+            }
+            .navigationTitle("Friends List")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddFriendView.toggle()
+                    } label: {
+                        Label("Add Book", systemImage: "plus")
+                    }
                 }
+            }
+            .sheet(isPresented: $showingAddFriendView) {
+                AddFriend()
+            }
         }
     }
 }
-
-//func exampleCode() {
-    //        VStack {
-    //            List(friends) { friend in
-    //                Text(friend.name ?? "No friends")
-    //            }
-    //
-    //            Button("Add") {
-    //                let firstNames = ["Beto", "Juan","Licuado"]
-    //                let lastNames = ["Reyes", "Nieto", "Soler"]
-    //
-    //                let randomFirst = firstNames.randomElement()!
-    //                let randomLast = lastNames.randomElement()!
-    //
-    //                let friend = Friend(context: moc)
-    //                friend.id = UUID()
-    //                friend.name = "\(randomFirst) \(randomLast)"
-    //
-    //                try? moc.save()
-    //
-    //            }
-    //
-    //        }
-    //            .padding()
-//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

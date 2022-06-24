@@ -35,12 +35,12 @@ struct AddFriend: View {
                 
                 Section {
                     TextEditor(text: $review)
-                    
-                    Picker("Rate Friend", selection: $rating) {
-                        ForEach(0..<6) {
-                            Text(String($0))
-                        }
-                    }
+                    RatingView(rating: $rating)
+//                    Picker("Rate Friend", selection: $rating) {
+//                        ForEach(0..<6) {
+//                            Text(String($0))
+//                        }
+//                    }
                 } header : {
                     Text("Rate your friend and write a review.")
                 }
