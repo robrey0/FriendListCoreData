@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var friends: FetchedResults<Friend>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var friends: FetchedResults<Friend>
     
     @State private var showingAddFriendView = false
     
@@ -19,7 +19,7 @@ struct ContentView: View {
             List {
                 ForEach(friends) { friend in
                     NavigationLink {
-                        Text(friend.name ?? "Anonimo")
+                        DetailView(friend: friend)
                     } label : {
                         HStack {
                             EmojiRatingView(rating: friend.rating)

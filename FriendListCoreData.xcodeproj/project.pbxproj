@@ -16,6 +16,7 @@
 		D52FCD83286389FE0026097F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD82286389FE0026097F /* DataController.swift */; };
 		D5810DBB28660F6A002DFB6C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5810DBA28660F6A002DFB6C /* RatingView.swift */; };
 		D5810DBD28665523002DFB6C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5810DBC28665523002DFB6C /* EmojiRatingView.swift */; };
+		D599E42028677D1000597A71 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599E41F28677D1000597A71 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D52FCD82286389FE0026097F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D5810DBA28660F6A002DFB6C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D5810DBC28665523002DFB6C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		D599E41F28677D1000597A71 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				D523741B2864D795004926DA /* AddFriend.swift */,
 				D5810DBA28660F6A002DFB6C /* RatingView.swift */,
 				D5810DBC28665523002DFB6C /* EmojiRatingView.swift */,
+				D599E41F28677D1000597A71 /* DetailView.swift */,
 				D52FCD7F286382520026097F /* FriendList.xcdatamodeld */,
 				D52FCD72286381DD0026097F /* Assets.xcassets */,
 				D52FCD74286381DE0026097F /* Preview Content */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D523741C2864D795004926DA /* AddFriend.swift in Sources */,
+				D599E42028677D1000597A71 /* DetailView.swift in Sources */,
 				D52FCD71286381D70026097F /* ContentView.swift in Sources */,
 				D5810DBD28665523002DFB6C /* EmojiRatingView.swift in Sources */,
 				D52FCD83286389FE0026097F /* DataController.swift in Sources */,
