@@ -35,9 +35,14 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteFriends)
             }
             .navigationTitle("Friends List")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showingAddFriendView.toggle()
@@ -50,6 +55,15 @@ struct ContentView: View {
                 AddFriend()
             }
         }
+    }
+    
+    func deleteFriends(at offsets: IndexSet) {
+        for offset in offsets {
+            let friend = friends[offset]
+            moc.delete(friend)
+        }
+        
+        try? moc.save()
     }
 }
 
